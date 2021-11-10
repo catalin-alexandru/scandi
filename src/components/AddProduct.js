@@ -10,7 +10,7 @@ const AddProduct = () => {
 		e.preventDefault();
 		try {
 			const body = { sku, name, price, type };
-			const response = await fetch("http://localhost:5000/products", {
+			const response = await fetch("https://radiant-badlands-87312.herokuapp.com/products", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(body)

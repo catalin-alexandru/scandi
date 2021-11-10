@@ -6,7 +6,7 @@ const ListProducts = () => {
 
 	const deleteProduct = async (id) => {
 		try {
-			const deleteProduct = await fetch(`http://localhost:5000/products/${id}`, {
+			const deleteProduct = await fetch(`https://radiant-badlands-87312.herokuapp.com/products/${id}`, {
 				method: "DELETE"
 			});
 
@@ -18,7 +18,7 @@ const ListProducts = () => {
 
 	const getProducts = async () => {
 		try {
-			const response = await fetch("http://localhost:5000/products")
+			const response = await fetch("https://radiant-badlands-87312.herokuapp.com/products")
 			const jsonData = await response.json()
 
 			setProducts(jsonData);
